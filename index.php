@@ -59,6 +59,10 @@
         <div class="col s12 m12">
           <div class="card teal">
             <div class="card-content white-text">
+              <?php if(empty($jk)){
+                      echo strtoupper("<strong><h4>Cek Kembali Formnya</h4></strong>");
+              }else{
+              ?>
               <h4>Hai <?php echo strtoupper($nama);?></h4>
               <h5>Hitungan 
                   <!--SELECT JENIS KELAMIN-->
@@ -80,7 +84,8 @@
                     <?php echo $a; ?>/100%
                   </b>
                 </h3>
-              </h5>   
+              </h5>
+              <?php }?>   
             </div>
             <div class="card-action">
               <a href="">
@@ -114,7 +119,7 @@
                   <div class="row">
                     <div class="input-field col s12 m12">
                       <i class="material-icons prefix">account_circle</i>
-                      <input id="icon_prefix" type="text" name="nama" class="validate">
+                      <input id="icon_prefix" type="text" name="nama" class="validate" required>
                       <label for="icon_prefix white-text">Nama</label>
                     </div>    
                   </div>
@@ -122,7 +127,7 @@
                   <div class="row">
                     <div class="input-field col s12 m12">
                       <i class="material-icons prefix">wc</i>
-                      <select class="icons" name="jk" id="jk">
+                      <select class="icons" name="jk" id="jk" required>
                         <option disabled selected selected="selected" required>Jenis Kelamin</option>
                         <option value="l" data-icon="img/male.jpg" class="left circle">Laki-laki</option>
                         <option value="p" data-icon="img/female.jpg" class="left circle">Perempuan</option>
